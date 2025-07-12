@@ -26,7 +26,6 @@ class SearchPageController extends ChangeNotifier {
   }
   
   void onFilterPressed() {
-    print('Filter pressed - Navigate to filter page');
     // اینجا می‌تونید navigation به صفحه فیلتر انجام دهید
   }
   
@@ -49,7 +48,6 @@ class SearchPageController extends ChangeNotifier {
   }
   
   void _performFinalSearch(String query) {
-    print('Final search for: $query');
     // اینجا جستجوی نهایی انجام می‌شود
   }
   

@@ -1,6 +1,6 @@
 class SearchModel {
   String _searchText = '';
-  List<String> _searchHistory = [];
+  final List<String> _searchHistory = [];
   bool _isLoading = false;
   
   String get searchText => _searchText;
