@@ -1,0 +1,7 @@
+*.cpp linguist-generated
+*.h linguist-generated
+CMakeLists.txt linguist-generated
+*.swift linguist-generated
+*.java linguist-generated
+*.kt linguist-generated
+*.html linguist-generated
