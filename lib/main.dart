@@ -4,6 +4,7 @@ import 'controllers/search_controller.dart';
 import 'controllers/carousel_controller.dart' as carousel_ctrl;
 import 'views/splash_screen.dart';
 import 'views/search_view.dart';
+import 'views/main_wrapper.dart'; // فایل جدید که ساختیم
 
 void main() {
   runApp(MyApp());
@@ -21,9 +22,15 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Movie & Series App',
-        theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'SF Pro Text'),
-        home: SplashScreen(),
-        routes: {'/search': (context) => const SearchView()},
+        theme: ThemeData(
+          primarySwatch: Colors.blue, 
+          fontFamily: 'SF Pro Text'
+        ),
+        home: SplashScreen(), // همچنان از SplashScreen شروع می‌شود
+        routes: {
+          '/search': (context) => const SearchView(),
+          '/home': (context) => MainWrapper(), // route جدید برای MainWrapper
+        },
         debugShowCheckedModeBanner: false,
       ),
     );

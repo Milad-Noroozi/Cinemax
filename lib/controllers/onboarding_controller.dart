@@ -124,6 +124,10 @@ class OnboardingController {
     }
   }
 
+  void skipToEnd(BuildContext context) {
+    completeOnboarding(context);
+  }
+
   void completeOnboarding(BuildContext context) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (context) => HomeScreen()),

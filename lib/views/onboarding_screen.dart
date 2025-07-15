@@ -4,6 +4,7 @@ import 'dart:math';
 import '../controllers/onboarding_controller.dart';
 import '../models/onboarding_model.dart';
 import '../widgets/animated_progress_border_painter.dart';
+import 'main_wrapper.dart'; // اضافه کردن import
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -27,6 +28,14 @@ class OnboardingScreenState extends State<OnboardingScreen>
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  // متد جدید برای هدایت به MainWrapper
+  void _navigateToMainWrapper() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => MainWrapper()),
+    );
   }
 
   @override
@@ -441,7 +450,13 @@ class OnboardingScreenState extends State<OnboardingScreen>
       onTapDown: (_) => _controller.buttonAnimationController.forward(),
       onTapUp: (_) {
         _controller.buttonAnimationController.reverse();
-        _controller.nextPage(context);
+        
+        // تغییر اینجا: اگر آخرین صفحه است، به MainWrapper برو
+        if (_controller.currentPage == _controller.pages.length - 1) {
+          _navigateToMainWrapper();
+        } else {
+          _controller.nextPage(context);
+        }
       },
       onTapCancel: () => _controller.buttonAnimationController.reverse(),
       child: AnimatedBuilder(
