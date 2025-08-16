@@ -14,13 +14,13 @@ class DownloadPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                CupertinoIcons.person_alt_circle,
+                CupertinoIcons.cloud_download,
                 size: 100,
                 color: const Color.fromARGB(255, 18, 205, 217),
               ),
               SizedBox(height: 20),
               Text(
-                'Profile Page',
+                'Download Page',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,

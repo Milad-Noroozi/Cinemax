@@ -17,8 +17,9 @@ class _MainWrapperState extends State<MainWrapper> {
   final List<Widget> _pages = [
     HomeScreen(), // Home - index 0
     SearchPage(), // Search - index 1
-    ProfilePage(), // Profile - index 2
     DownloadPage(),
+    ProfilePage(), 
+
   ];
 
   @override
@@ -44,7 +45,7 @@ class _MainWrapperState extends State<MainWrapper> {
           ),
           SalomonBottomBarItem(
             icon: Icon(Icons.download),
-            title: Text("Likes"),
+            title: Text("download"),
             selectedColor: const Color.fromARGB(255, 18, 205, 217),
             unselectedColor: Colors.white,
           ),

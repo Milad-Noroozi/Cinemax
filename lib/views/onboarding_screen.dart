@@ -30,8 +30,7 @@ class OnboardingScreenState extends State<OnboardingScreen>
     super.dispose();
   }
 
-  // متد جدید برای هدایت به MainWrapper
-  void _navigateToMainWrapper() {
+ void _navigateToMainWrapper() {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => MainWrapper()),
